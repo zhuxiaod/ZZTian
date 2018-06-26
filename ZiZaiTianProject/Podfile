@@ -1,0 +1,4 @@
+target 'ZiZaiTianProject' do
+pod 'MJExtension'
+end
+
