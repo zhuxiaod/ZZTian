@@ -57,5 +57,13 @@
     //tag
     _verificationButton.tag = 0;
     _loginRegisterButton.tag = 1;
+    
+
+    [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(verifictionPhoneNumber) name:UITextFieldTextDidChangeNotification object:nil];
+}
+
+-(void)verifictionPhoneNumber
+{
+    NSLog(@"asdfasdfa");
 }
 @end

@@ -39,10 +39,12 @@ NSString *bannerID = @"MeCell";
     //创建静态的tableView
 //    _tableView.backgroundColor = [UIColor colorWithHexString:@"#58006E"];
     _tableView = [[UITableView alloc] initWithFrame:CGRectMake(0, 0, self.view.bounds.size.width, self.view.bounds.size.height) style:UITableViewStyleGrouped];
+    _tableView.sectionHeaderHeight = 5;
+    _tableView.sectionFooterHeight = 0;
     _tableView.dataSource = self;
     _tableView.delegate = self;
     //行高
-    _tableView.rowHeight = 50;
+//    _tableView.rowHeight = 50;
     //隐藏滚动条
     _tableView.showsVerticalScrollIndicator = NO;
     //添加头视图
@@ -152,10 +154,10 @@ NSString *bannerID = @"MeCell";
     }
 }
 //头视图高度
-- (CGFloat)tableView:(UITableView *)tableView heightForHeaderInSection:(NSInteger)section
-{
-    return 220;
-}
+//- (CGFloat)tableView:(UITableView *)tableView heightForHeaderInSection:(NSInteger)section
+//{
+//    return 220;
+//}
 -(void)viewWillAppear:(BOOL)animated
 {
     [super viewWillAppear:animated];

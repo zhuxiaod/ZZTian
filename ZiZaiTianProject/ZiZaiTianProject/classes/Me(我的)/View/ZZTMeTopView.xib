@@ -172,7 +172,7 @@
                 <outlet property="userName" destination="xpB-Wr-gU0" id="eBR-hg-d4j"/>
                 <outlet property="zBiButton" destination="7m0-ZJ-UyI" id="jmf-pF-gI4"/>
             </connections>
-            <point key="canvasLocation" x="-108.5" y="66"/>
+            <point key="canvasLocation" x="-30" y="80"/>
         </view>
     </objects>
 </document>

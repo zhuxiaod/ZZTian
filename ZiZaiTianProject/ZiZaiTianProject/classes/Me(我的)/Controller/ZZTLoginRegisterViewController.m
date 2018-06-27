@@ -21,7 +21,9 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     self.view.backgroundColor = [UIColor redColor];
-
+// 获取cooick
+//    https://blog.csdn.net/qthdsy/article/details/51991845
+    
     //登录view
     ZXDLoginRegisterView *loginView = [ZXDLoginRegisterView loginView];
     [self.midView addSubview:loginView];
