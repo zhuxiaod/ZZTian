@@ -124,15 +124,24 @@
                             <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                             <nil key="highlightedColor"/>
                         </label>
+                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="iUl-ao-J2b">
+                            <rect key="frame" x="10" y="10" width="80" height="109"/>
+                            <constraints>
+                                <constraint firstAttribute="height" constant="109" id="nB7-jS-nXz"/>
+                            </constraints>
+                        </button>
                     </subviews>
                     <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                     <constraints>
                         <constraint firstAttribute="trailing" secondItem="aX0-ry-M2A" secondAttribute="trailing" constant="10" id="2nq-P4-UEQ"/>
                         <constraint firstItem="xpB-Wr-gU0" firstAttribute="centerX" secondItem="aX0-ry-M2A" secondAttribute="centerX" id="Awt-97-Da2"/>
                         <constraint firstItem="xpB-Wr-gU0" firstAttribute="top" secondItem="aX0-ry-M2A" secondAttribute="bottom" constant="8" id="GcZ-yV-XbE"/>
+                        <constraint firstItem="iUl-ao-J2b" firstAttribute="top" secondItem="rPL-yw-YZg" secondAttribute="top" constant="10" id="GpS-5j-VSt"/>
+                        <constraint firstAttribute="trailing" secondItem="iUl-ao-J2b" secondAttribute="trailing" constant="10" id="HWO-DM-qR7"/>
                         <constraint firstItem="aX0-ry-M2A" firstAttribute="leading" secondItem="rPL-yw-YZg" secondAttribute="leading" constant="10" id="RkJ-Lg-kZP"/>
                         <constraint firstAttribute="height" constant="130" id="ZX6-Yx-fxP"/>
                         <constraint firstItem="aX0-ry-M2A" firstAttribute="top" secondItem="rPL-yw-YZg" secondAttribute="top" constant="10" id="ZZy-v8-iXf"/>
+                        <constraint firstItem="iUl-ao-J2b" firstAttribute="leading" secondItem="rPL-yw-YZg" secondAttribute="leading" constant="10" id="jTe-yz-usm"/>
                         <constraint firstAttribute="width" constant="100" id="n2e-Ag-UlD"/>
                     </constraints>
                 </view>
@@ -154,6 +163,7 @@
             </constraints>
             <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
             <connections>
+                <outlet property="headButton" destination="iUl-ao-J2b" id="c8j-3R-bXZ"/>
                 <outlet property="integralButton" destination="jhZ-yu-HwK" id="o6G-vx-QbH"/>
                 <outlet property="messageButton" destination="FoZ-Zr-ngB" id="PNb-jR-EHy"/>
                 <outlet property="readTicket" destination="hZ8-tz-8sS" id="eyX-y9-ikM"/>
@@ -162,7 +172,7 @@
                 <outlet property="userName" destination="xpB-Wr-gU0" id="eBR-hg-d4j"/>
                 <outlet property="zBiButton" destination="7m0-ZJ-UyI" id="jmf-pF-gI4"/>
             </connections>
-            <point key="canvasLocation" x="-108" y="66"/>
+            <point key="canvasLocation" x="-108.5" y="66"/>
         </view>
     </objects>
 </document>

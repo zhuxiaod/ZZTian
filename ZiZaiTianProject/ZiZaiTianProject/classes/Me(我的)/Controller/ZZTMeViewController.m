@@ -12,6 +12,8 @@
 #import "ZZTSettingCell.h"
 #import "MJExtension.h"
 #import "ZZTCell.h"
+#import "ZZTLoginRegisterViewController.h"
+#import "ZZTVIPViewController.h"
 
 @interface ZZTMeViewController ()<UITableViewDataSource,UITableViewDelegate>
 @property (weak, nonatomic) IBOutlet UIView *topView;
@@ -56,7 +58,24 @@ NSString *bannerID = @"MeCell";
 
 
 -(void)buttonClick:(UIButton *)button{
-    NSLog(@"w ");
+    if (button.tag == 0) {
+        NSLog(@"我是z币");
+    }else if(button.tag == 1){
+        NSLog(@"我是积分");
+    }else if(button.tag == 2){
+        NSLog(@"我是票");
+    }
+    else if(button.tag == 3){
+        NSLog(@"我是消息");
+    }
+    else if(button.tag == 4){
+        
+        ZZTLoginRegisterViewController *loginView = [[ZZTLoginRegisterViewController alloc]initWithNibName:@"ZZTLoginRegisterViewController" bundle:nil];
+        [self presentViewController:loginView animated:YES completion:nil];
+
+    }else{
+        NSLog(@"我是签到");
+    }
 }
 #pragma mark - tableView
 -(NSInteger)numberOfSectionsInTableView:(UITableView *)tableView
@@ -120,7 +139,23 @@ NSString *bannerID = @"MeCell";
     }
     return cell;
 }
+//选中cell
+- (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath
+{
+    if (indexPath.section == 0) {
+        if(indexPath.row == 0){
+            ZZTVIPViewController *VIPView = [[ZZTVIPViewController alloc]init];
+            VIPView.hidesBottomBarWhenPushed = YES;
 
+            [self.navigationController pushViewController:VIPView animated:YES];
+        }
+    }
+}
+//头视图高度
+- (CGFloat)tableView:(UITableView *)tableView heightForHeaderInSection:(NSInteger)section
+{
+    return 220;
+}
 -(void)viewWillAppear:(BOOL)animated
 {
     [super viewWillAppear:animated];

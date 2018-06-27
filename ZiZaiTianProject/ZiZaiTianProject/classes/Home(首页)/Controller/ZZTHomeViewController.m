@@ -17,21 +17,25 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     self.view.backgroundColor = [UIColor yellowColor];
+    
+    [self setupNavBar];
+    
+    //隐藏滚动条
+    self.tableView.showsVerticalScrollIndicator = NO;
 }
 
-- (void)didReceiveMemoryWarning {
-    [super didReceiveMemoryWarning];
-    // Dispose of any resources that can be recreated.
+#pragma mark - 设置导航条
+-(void)setupNavBar
+{
+    //右边导航条
+    self.navigationItem.rightBarButtonItem = [UIBarButtonItem itemWithImage:[UIImage imageNamed:@"search"] highImage:[UIImage imageNamed:@"search"] target:self action:@selector(history)];
+    //左边导航条
+    self.navigationItem.leftBarButtonItem = [UIBarButtonItem itemWithImage:[UIImage imageNamed:@"time"] highImage:[UIImage imageNamed:@"time"] target:self action:@selector(history)];
+    
+    //中间导航条
+    self.navigationItem.title = @"首页";
 }
-
-/*
-#pragma mark - Navigation
-
-// In a storyboard-based application, you will often want to do a little preparation before navigation
-- (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender {
-    // Get the new view controller using [segue destinationViewController].
-    // Pass the selected object to the new view controller.
+-(void)history{
+    NSLog(@"你是傻逼？");
 }
-*/
-
 @end

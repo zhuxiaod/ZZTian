@@ -16,6 +16,22 @@
 		048C335820E24E1600F69CE1 /* ZZTSettingCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 048C335720E24E1600F69CE1 /* ZZTSettingCell.m */; };
 		048C335C20E2540F00F69CE1 /* ZZTCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 048C335B20E2540F00F69CE1 /* ZZTCell.m */; };
 		048C33E820E25E6400F69CE1 /* UIColor+Hex.m in Sources */ = {isa = PBXBuildFile; fileRef = 048C33E720E25E6400F69CE1 /* UIColor+Hex.m */; };
+		049A99B520E3288400ED27C9 /* UITextField+ZXDLoginRegisterTextField.m in Sources */ = {isa = PBXBuildFile; fileRef = 049A99AA20E3288400ED27C9 /* UITextField+ZXDLoginRegisterTextField.m */; };
+		049A99B620E3288400ED27C9 /* ZXDButton.m in Sources */ = {isa = PBXBuildFile; fileRef = 049A99AC20E3288400ED27C9 /* ZXDButton.m */; };
+		049A99B720E3288400ED27C9 /* ZXDFastLoginView.m in Sources */ = {isa = PBXBuildFile; fileRef = 049A99AE20E3288400ED27C9 /* ZXDFastLoginView.m */; };
+		049A99B820E3288400ED27C9 /* ZXDFastLoginView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 049A99AF20E3288400ED27C9 /* ZXDFastLoginView.xib */; };
+		049A99B920E3288400ED27C9 /* ZXDLoginRegisterTextField.m in Sources */ = {isa = PBXBuildFile; fileRef = 049A99B120E3288400ED27C9 /* ZXDLoginRegisterTextField.m */; };
+		049A99BA20E3288400ED27C9 /* ZXDLoginRegisterView.m in Sources */ = {isa = PBXBuildFile; fileRef = 049A99B320E3288400ED27C9 /* ZXDLoginRegisterView.m */; };
+		049A99BB20E3288400ED27C9 /* ZXDLoginRegisterView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 049A99B420E3288400ED27C9 /* ZXDLoginRegisterView.xib */; };
+		049A99C920E32AF600ED27C9 /* UITextField+ZXDTextField.m in Sources */ = {isa = PBXBuildFile; fileRef = 049A99C620E32AF500ED27C9 /* UITextField+ZXDTextField.m */; };
+		049A99CA20E32AF600ED27C9 /* UIView+Frame.m in Sources */ = {isa = PBXBuildFile; fileRef = 049A99C720E32AF500ED27C9 /* UIView+Frame.m */; };
+		049A99D320E32F2F00ED27C9 /* ZZTLoginRegisterViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 049A99D120E32F2F00ED27C9 /* ZZTLoginRegisterViewController.m */; };
+		049A99D420E32F2F00ED27C9 /* ZZTLoginRegisterViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 049A99D220E32F2F00ED27C9 /* ZZTLoginRegisterViewController.xib */; };
+		049A99D720E3717A00ED27C9 /* UIBarButtonItem+Item.m in Sources */ = {isa = PBXBuildFile; fileRef = 049A99D620E3717900ED27C9 /* UIBarButtonItem+Item.m */; };
+		049A99DB20E3879700ED27C9 /* ZZTVIPViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 049A99D920E3879700ED27C9 /* ZZTVIPViewController.m */; };
+		049A99DC20E3879700ED27C9 /* ZZTVIPViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 049A99DA20E3879700ED27C9 /* ZZTVIPViewController.xib */; };
+		049A99EA20E394BB00ED27C9 /* ZZTVIPTopView.m in Sources */ = {isa = PBXBuildFile; fileRef = 049A99E820E394BB00ED27C9 /* ZZTVIPTopView.m */; };
+		049A99EB20E394BB00ED27C9 /* ZZTVIPTopView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 049A99E920E394BB00ED27C9 /* ZZTVIPTopView.xib */; };
 		D9D2D4F33CB3B47DB08AD9C9 /* libPods-ZiZaiTianProject.a in Frameworks */ = {isa = PBXBuildFile; fileRef = BA8586C54F8E7A26D9A888C6 /* libPods-ZiZaiTianProject.a */; };
 		F7C04BEE20DF3D190055E7A8 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F7C04BEC20DF3D190055E7A8 /* Main.storyboard */; };
 		F7C04BF020DF3D190055E7A8 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = F7C04BEF20DF3D190055E7A8 /* Assets.xcassets */; };
@@ -48,6 +64,33 @@
 		048C33E520E25DB500F69CE1 /* ZiZaiTianProject.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ZiZaiTianProject.pch; sourceTree = "<group>"; };
 		048C33E620E25E6400F69CE1 /* UIColor+Hex.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIColor+Hex.h"; sourceTree = "<group>"; };
 		048C33E720E25E6400F69CE1 /* UIColor+Hex.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIColor+Hex.m"; sourceTree = "<group>"; };
+		049A99A920E3288400ED27C9 /* UITextField+ZXDLoginRegisterTextField.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UITextField+ZXDLoginRegisterTextField.h"; sourceTree = "<group>"; };
+		049A99AA20E3288400ED27C9 /* UITextField+ZXDLoginRegisterTextField.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UITextField+ZXDLoginRegisterTextField.m"; sourceTree = "<group>"; };
+		049A99AB20E3288400ED27C9 /* ZXDButton.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ZXDButton.h; sourceTree = "<group>"; };
+		049A99AC20E3288400ED27C9 /* ZXDButton.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ZXDButton.m; sourceTree = "<group>"; };
+		049A99AD20E3288400ED27C9 /* ZXDFastLoginView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ZXDFastLoginView.h; sourceTree = "<group>"; };
+		049A99AE20E3288400ED27C9 /* ZXDFastLoginView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ZXDFastLoginView.m; sourceTree = "<group>"; };
+		049A99AF20E3288400ED27C9 /* ZXDFastLoginView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = ZXDFastLoginView.xib; sourceTree = "<group>"; };
+		049A99B020E3288400ED27C9 /* ZXDLoginRegisterTextField.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ZXDLoginRegisterTextField.h; sourceTree = "<group>"; };
+		049A99B120E3288400ED27C9 /* ZXDLoginRegisterTextField.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ZXDLoginRegisterTextField.m; sourceTree = "<group>"; };
+		049A99B220E3288400ED27C9 /* ZXDLoginRegisterView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ZXDLoginRegisterView.h; sourceTree = "<group>"; };
+		049A99B320E3288400ED27C9 /* ZXDLoginRegisterView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ZXDLoginRegisterView.m; sourceTree = "<group>"; };
+		049A99B420E3288400ED27C9 /* ZXDLoginRegisterView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = ZXDLoginRegisterView.xib; sourceTree = "<group>"; };
+		049A99C520E32AF500ED27C9 /* UIView+Frame.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIView+Frame.h"; sourceTree = "<group>"; };
+		049A99C620E32AF500ED27C9 /* UITextField+ZXDTextField.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UITextField+ZXDTextField.m"; sourceTree = "<group>"; };
+		049A99C720E32AF500ED27C9 /* UIView+Frame.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIView+Frame.m"; sourceTree = "<group>"; };
+		049A99C820E32AF600ED27C9 /* UITextField+ZXDTextField.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UITextField+ZXDTextField.h"; sourceTree = "<group>"; };
+		049A99D020E32F2F00ED27C9 /* ZZTLoginRegisterViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ZZTLoginRegisterViewController.h; sourceTree = "<group>"; };
+		049A99D120E32F2F00ED27C9 /* ZZTLoginRegisterViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ZZTLoginRegisterViewController.m; sourceTree = "<group>"; };
+		049A99D220E32F2F00ED27C9 /* ZZTLoginRegisterViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ZZTLoginRegisterViewController.xib; sourceTree = "<group>"; };
+		049A99D520E3717900ED27C9 /* UIBarButtonItem+Item.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = "UIBarButtonItem+Item.h"; path = "../../../../../../../.Trash/GuShiCi 下午7.27.08/GuShiCi/classes/Other/Category/UIBarButtonItem+Item.h"; sourceTree = "<group>"; };
+		049A99D620E3717900ED27C9 /* UIBarButtonItem+Item.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = "UIBarButtonItem+Item.m"; path = "../../../../../../../.Trash/GuShiCi 下午7.27.08/GuShiCi/classes/Other/Category/UIBarButtonItem+Item.m"; sourceTree = "<group>"; };
+		049A99D820E3879700ED27C9 /* ZZTVIPViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ZZTVIPViewController.h; sourceTree = "<group>"; };
+		049A99D920E3879700ED27C9 /* ZZTVIPViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ZZTVIPViewController.m; sourceTree = "<group>"; };
+		049A99DA20E3879700ED27C9 /* ZZTVIPViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ZZTVIPViewController.xib; sourceTree = "<group>"; };
+		049A99E720E394BA00ED27C9 /* ZZTVIPTopView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ZZTVIPTopView.h; sourceTree = "<group>"; };
+		049A99E820E394BB00ED27C9 /* ZZTVIPTopView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ZZTVIPTopView.m; sourceTree = "<group>"; };
+		049A99E920E394BB00ED27C9 /* ZZTVIPTopView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = ZZTVIPTopView.xib; sourceTree = "<group>"; };
 		749399599CA48ED07BA87311 /* Pods-ZiZaiTianProject.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ZiZaiTianProject.release.xcconfig"; path = "Pods/Target Support Files/Pods-ZiZaiTianProject/Pods-ZiZaiTianProject.release.xcconfig"; sourceTree = "<group>"; };
 		8E61AC85E4D70CE81268AC0F /* Pods-ZiZaiTianProject.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ZiZaiTianProject.debug.xcconfig"; path = "Pods/Target Support Files/Pods-ZiZaiTianProject/Pods-ZiZaiTianProject.debug.xcconfig"; sourceTree = "<group>"; };
 		BA8586C54F8E7A26D9A888C6 /* libPods-ZiZaiTianProject.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-ZiZaiTianProject.a"; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -90,6 +133,10 @@
 		048C333C20E211B200F69CE1 /* View */ = {
 			isa = PBXGroup;
 			children = (
+				049A99E720E394BA00ED27C9 /* ZZTVIPTopView.h */,
+				049A99E820E394BB00ED27C9 /* ZZTVIPTopView.m */,
+				049A99E920E394BB00ED27C9 /* ZZTVIPTopView.xib */,
+				049A99A820E3288400ED27C9 /* Login */,
 				048C333D20E211C100F69CE1 /* ZZTMeTopView.h */,
 				048C333E20E211C100F69CE1 /* ZZTMeTopView.m */,
 				048C334020E2121C00F69CE1 /* ZZTMeTopView.xib */,
@@ -110,6 +157,25 @@
 			name = Model;
 			path = "ZiZaiTianProject/classes/Me(我的)/Model";
 			sourceTree = SOURCE_ROOT;
+		};
+		049A99A820E3288400ED27C9 /* Login */ = {
+			isa = PBXGroup;
+			children = (
+				049A99A920E3288400ED27C9 /* UITextField+ZXDLoginRegisterTextField.h */,
+				049A99AA20E3288400ED27C9 /* UITextField+ZXDLoginRegisterTextField.m */,
+				049A99AB20E3288400ED27C9 /* ZXDButton.h */,
+				049A99AC20E3288400ED27C9 /* ZXDButton.m */,
+				049A99AD20E3288400ED27C9 /* ZXDFastLoginView.h */,
+				049A99AE20E3288400ED27C9 /* ZXDFastLoginView.m */,
+				049A99AF20E3288400ED27C9 /* ZXDFastLoginView.xib */,
+				049A99B020E3288400ED27C9 /* ZXDLoginRegisterTextField.h */,
+				049A99B120E3288400ED27C9 /* ZXDLoginRegisterTextField.m */,
+				049A99B220E3288400ED27C9 /* ZXDLoginRegisterView.h */,
+				049A99B320E3288400ED27C9 /* ZXDLoginRegisterView.m */,
+				049A99B420E3288400ED27C9 /* ZXDLoginRegisterView.xib */,
+			);
+			path = Login;
+			sourceTree = "<group>";
 		};
 		6A89D7600687879961A023BD /* Frameworks */ = {
 			isa = PBXGroup;
@@ -254,6 +320,12 @@
 			children = (
 				048C333320E2106200F69CE1 /* ZZTMeViewController.h */,
 				048C333420E2106200F69CE1 /* ZZTMeViewController.m */,
+				049A99D020E32F2F00ED27C9 /* ZZTLoginRegisterViewController.h */,
+				049A99D120E32F2F00ED27C9 /* ZZTLoginRegisterViewController.m */,
+				049A99D220E32F2F00ED27C9 /* ZZTLoginRegisterViewController.xib */,
+				049A99D820E3879700ED27C9 /* ZZTVIPViewController.h */,
+				049A99D920E3879700ED27C9 /* ZZTVIPViewController.m */,
+				049A99DA20E3879700ED27C9 /* ZZTVIPViewController.xib */,
 			);
 			path = Controller;
 			sourceTree = "<group>";
@@ -290,6 +362,12 @@
 		F7C04C1220DF43C90055E7A8 /* Category */ = {
 			isa = PBXGroup;
 			children = (
+				049A99D520E3717900ED27C9 /* UIBarButtonItem+Item.h */,
+				049A99D620E3717900ED27C9 /* UIBarButtonItem+Item.m */,
+				049A99C820E32AF600ED27C9 /* UITextField+ZXDTextField.h */,
+				049A99C620E32AF500ED27C9 /* UITextField+ZXDTextField.m */,
+				049A99C520E32AF500ED27C9 /* UIView+Frame.h */,
+				049A99C720E32AF500ED27C9 /* UIView+Frame.m */,
 				048C33E620E25E6400F69CE1 /* UIColor+Hex.h */,
 				048C33E720E25E6400F69CE1 /* UIColor+Hex.m */,
 				F7C04C1620DF44260055E7A8 /* UIBarButtonItem+Item.h */,
@@ -361,10 +439,15 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				049A99EB20E394BB00ED27C9 /* ZZTVIPTopView.xib in Resources */,
 				048C334120E2121C00F69CE1 /* ZZTMeTopView.xib in Resources */,
 				F7C04BF320DF3D190055E7A8 /* LaunchScreen.storyboard in Resources */,
+				049A99BB20E3288400ED27C9 /* ZXDLoginRegisterView.xib in Resources */,
+				049A99DC20E3879700ED27C9 /* ZZTVIPViewController.xib in Resources */,
 				F7C04BF020DF3D190055E7A8 /* Assets.xcassets in Resources */,
 				F7C04BEE20DF3D190055E7A8 /* Main.storyboard in Resources */,
+				049A99B820E3288400ED27C9 /* ZXDFastLoginView.xib in Resources */,
+				049A99D420E32F2F00ED27C9 /* ZZTLoginRegisterViewController.xib in Resources */,
 				048C334D20E22B3300F69CE1 /* dc7b21454310eb4ab66472cb1e4d7ec1.jpg in Resources */,
 				048C335420E24C5700F69CE1 /* settingData.plist in Resources */,
 			);
@@ -399,18 +482,29 @@
 			buildActionMask = 2147483647;
 			files = (
 				048C333F20E211C100F69CE1 /* ZZTMeTopView.m in Sources */,
+				049A99D720E3717A00ED27C9 /* UIBarButtonItem+Item.m in Sources */,
+				049A99CA20E32AF600ED27C9 /* UIView+Frame.m in Sources */,
+				049A99BA20E3288400ED27C9 /* ZXDLoginRegisterView.m in Sources */,
 				048C33E820E25E6400F69CE1 /* UIColor+Hex.m in Sources */,
+				049A99DB20E3879700ED27C9 /* ZZTVIPViewController.m in Sources */,
 				F7C04C2A20DF4A1F0055E7A8 /* UIImage+ZZTimage.m in Sources */,
+				049A99C920E32AF600ED27C9 /* UITextField+ZXDTextField.m in Sources */,
+				049A99B920E3288400ED27C9 /* ZXDLoginRegisterTextField.m in Sources */,
 				F7C04C1E20DF48FD0055E7A8 /* ZZTFindViewController.m in Sources */,
+				049A99B520E3288400ED27C9 /* UITextField+ZXDLoginRegisterTextField.m in Sources */,
 				F7C04C1B20DF476F0055E7A8 /* ZZTTabBarViewController.m in Sources */,
 				048C335C20E2540F00F69CE1 /* ZZTCell.m in Sources */,
+				049A99D320E32F2F00ED27C9 /* ZZTLoginRegisterViewController.m in Sources */,
 				F7C04C0C20DF3E9E0055E7A8 /* AppDelegate.m in Sources */,
+				049A99B620E3288400ED27C9 /* ZXDButton.m in Sources */,
 				F7C04C2120DF49190055E7A8 /* ZZTHomeViewController.m in Sources */,
+				049A99B720E3288400ED27C9 /* ZXDFastLoginView.m in Sources */,
 				048C333620E2106200F69CE1 /* ZZTMeViewController.m in Sources */,
 				F7C04C1820DF44260055E7A8 /* UIBarButtonItem+Item.m in Sources */,
 				048C335120E23DBF00F69CE1 /* ZZTMeCell.m in Sources */,
 				048C335820E24E1600F69CE1 /* ZZTSettingCell.m in Sources */,
 				F7C04C2D20DF4F8F0055E7A8 /* UIImage+ColorWithImage.m in Sources */,
+				049A99EA20E394BB00ED27C9 /* ZZTVIPTopView.m in Sources */,
 				F7C04C1120DF3FDD0055E7A8 /* ZZTNavigationViewController.m in Sources */,
 				F7C04BF620DF3D190055E7A8 /* main.m in Sources */,
 			);
@@ -584,6 +678,7 @@
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
+				ONLY_ACTIVE_ARCH = YES;
 				PRODUCT_BUNDLE_IDENTIFIER = zxd.ZiZaiTianProject;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				TARGETED_DEVICE_FAMILY = "1,2";

@@ -10,5 +10,8 @@
 #define ZiZaiTianProject_pch
 
 #import "UIColor+Hex.h"
+#import "AFNetworking.h"
+#import "UIBarButtonItem+Item.h"
+#import "UIImage+ColorWithImage.h"
 
 #endif /* ZiZaiTianProject_pch */
