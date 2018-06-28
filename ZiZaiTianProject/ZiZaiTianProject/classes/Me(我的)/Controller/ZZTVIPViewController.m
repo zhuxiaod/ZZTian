@@ -8,6 +8,8 @@
 
 #import "ZZTVIPViewController.h"
 #import "ZZTVIPTopView.h"
+#import "ZZTVIPMidView.h"
+#import "ZZTVIPBtView.h"
 
 @interface ZZTVIPViewController ()
 @property (weak, nonatomic) IBOutlet UIView *top;
@@ -26,6 +28,13 @@
     ZZTVIPTopView *topView = [ZZTVIPTopView VIPTopView];
 
     [_top addSubview:topView];
+    
+    ZZTVIPMidView *midView = [ZZTVIPMidView VIPMidView];
+    [_mid addSubview:midView];
+    
+    ZZTVIPBtView *btView = [ZZTVIPBtView VIPBtView];
+    [_buttom addSubview:btView];
+
 }
 
 -(void)viewWillAppear:(BOOL)animated

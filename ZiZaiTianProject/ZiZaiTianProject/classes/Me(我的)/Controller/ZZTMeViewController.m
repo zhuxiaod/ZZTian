@@ -14,6 +14,7 @@
 #import "ZZTCell.h"
 #import "ZZTLoginRegisterViewController.h"
 #import "ZZTVIPViewController.h"
+#import "ZZTBrowseViewController.h"
 
 @interface ZZTMeViewController ()<UITableViewDataSource,UITableViewDelegate>
 @property (weak, nonatomic) IBOutlet UIView *topView;
@@ -30,16 +31,25 @@ NSString *bannerID = @"MeCell";
 
 - (void)viewDidLoad {
     [super viewDidLoad];
+    //请求数据
+    [self getData];
     //设置table
     [self setupTab];
 }
+
+#pragma mark - 请求数据
+-(void)getData{
+    
+  
+}
+
 #pragma mark - 设置tableView
 -(void)setupTab
 {
     //创建静态的tableView
 //    _tableView.backgroundColor = [UIColor colorWithHexString:@"#58006E"];
     _tableView = [[UITableView alloc] initWithFrame:CGRectMake(0, 0, self.view.bounds.size.width, self.view.bounds.size.height) style:UITableViewStyleGrouped];
-    _tableView.sectionHeaderHeight = 5;
+    _tableView.sectionHeaderHeight = 10;
     _tableView.sectionFooterHeight = 0;
     _tableView.dataSource = self;
     _tableView.delegate = self;
@@ -151,13 +161,15 @@ NSString *bannerID = @"MeCell";
 
             [self.navigationController pushViewController:VIPView animated:YES];
         }
+    }else if(indexPath.section == 3){
+        if(indexPath.row == 1){
+            ZZTBrowseViewController *browse = [[ZZTBrowseViewController alloc] init];
+            browse.hidesBottomBarWhenPushed = YES;
+            [self.navigationController pushViewController:browse animated:YES];
+        }
     }
 }
-//头视图高度
-//- (CGFloat)tableView:(UITableView *)tableView heightForHeaderInSection:(NSInteger)section
-//{
-//    return 220;
-//}
+
 -(void)viewWillAppear:(BOOL)animated
 {
     [super viewWillAppear:animated];

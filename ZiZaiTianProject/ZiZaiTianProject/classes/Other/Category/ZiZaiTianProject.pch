@@ -13,5 +13,11 @@
 #import "AFNetworking.h"
 #import "UIBarButtonItem+Item.h"
 #import "UIImage+ColorWithImage.h"
-
+#define MyLog(...) NSLog(__VA_ARGS__);
+/** 屏幕尺寸 */
+#define SCREEN_BOUNDS [UIScreen mainScreen].bounds
+#define Screen_Width [UIScreen mainScreen].bounds.size.width
+#define Screen_Height [UIScreen mainScreen].bounds.size.height
+/** RGB色 + 透明度 */
+#define RGB_alphaColor(r,g,b,a) [UIColor colorWithRed:(r)/255.0 green:(g)/255.0 blue:(b)/255.0 alpha:(a)]
 #endif /* ZiZaiTianProject_pch */

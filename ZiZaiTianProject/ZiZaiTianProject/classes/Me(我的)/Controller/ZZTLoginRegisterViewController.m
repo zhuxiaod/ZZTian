@@ -45,7 +45,9 @@
 {
     //验证码
     AFHTTPSessionManager *manager = [AFHTTPSessionManager manager];
-    [manager.requestSerializer setValue:@"text/xml; charset=ut-8" forHTTPHeaderField:@"Content-Type"];
+//    [manager.requestSerializer setValue:@"text/xml; charset=ut-8" forHTTPHeaderField:@"Content-Type"];
+  
+
     
     if (button.tag == 0) {
         //1.创建会话管理者
@@ -53,27 +55,41 @@
         //http://192.168.0.165:8888/login/sendMsg?phoneNumber=18827514330
         //判断验证码是否够数位
         //如果够 发送  不够 就提示
-        [manager.requestSerializer setValue:@"text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8" forHTTPHeaderField:@"Accept"];
+
         NSDictionary *paramDict = @{
-                                    @"phoneNumber":@"18827514330"
+                                    @"phone":@"18827514330"
                                     };
+        //获取cookie
+        NSData * cookiesData = [NSKeyedArchiver archivedDataWithRootObject: [[NSHTTPCookieStorage sharedHTTPCookieStorage] cookies]];
+        NSUserDefaults * defaults = [NSUserDefaults standardUserDefaults];
+        [defaults setObject: cookiesData forKey:@"Set-Cookie"];
+        [defaults synchronize];
+
         [manager POST:@"http://192.168.0.165:8888/login/sendMsg" parameters:paramDict progress:nil success:^(NSURLSessionDataTask * _Nonnull task, id  _Nullable responseObject) {
             NSLog(@"%@---%@",[responseObject class],responseObject);
+            
         } failure:^(NSURLSessionDataTask * _Nullable task, NSError * _Nonnull error) {
             NSLog(@"请求失败 -- %@",error);
         }];
+        //取cookie
+        NSArray * cookies = [NSKeyedUnarchiver unarchiveObjectWithData: [[NSUserDefaults standardUserDefaults] objectForKey:@"Set-Cookie"]];
+        NSHTTPCookieStorage * cookieStorage = [NSHTTPCookieStorage sharedHTTPCookieStorage]; for (NSHTTPCookie * cookie in cookies){
+            [cookieStorage setCookie: cookie];
+            NSLog(@"%@",cookie);
+        }
     }else{
         //登录
         NSDictionary *paramDict = @{
-                                    @"phoneNumber":@"18827514330",
-                                    @"checkCode":@"980213"
+                                    @"phone":@"18827514330",
+                                    @"checkCode":@"268996"
                                     };
-       
         [manager POST:@"http://192.168.0.165:8888/login/loginApp" parameters:paramDict progress:nil success:^(NSURLSessionDataTask * _Nonnull task, id  _Nullable responseObject) {
             NSLog(@"%@---%@",[responseObject class],responseObject);
         } failure:^(NSURLSessionDataTask * _Nullable task, NSError * _Nonnull error) {
             NSLog(@"请求失败 -- %@",error);
         }];
+        
+       
     }
 }
 
