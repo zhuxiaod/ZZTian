@@ -14,7 +14,7 @@
 #import "ZZTCell.h"
 #import "ZZTLoginRegisterViewController.h"
 #import "ZZTVIPViewController.h"
-#import "ZZTBrowseViewController.h"
+#import "ZZTBrowViewController.h"
 
 @interface ZZTMeViewController ()<UITableViewDataSource,UITableViewDelegate>
 @property (weak, nonatomic) IBOutlet UIView *topView;
@@ -162,8 +162,14 @@ NSString *bannerID = @"MeCell";
             [self.navigationController pushViewController:VIPView animated:YES];
         }
     }else if(indexPath.section == 3){
-        if(indexPath.row == 1){
-            ZZTBrowseViewController *browse = [[ZZTBrowseViewController alloc] init];
+        if(indexPath.row == 0){
+            ZZTBrowViewController *participationView = [[ZZTBrowViewController alloc] initWithNibName:@"ZZTBrowViewController" bundle:nil];
+            participationView.viewTitle = @"参与作品";
+            participationView.hidesBottomBarWhenPushed = YES;
+            [self.navigationController pushViewController:participationView animated:YES];
+        }else if(indexPath.row == 1){
+            ZZTBrowViewController *browse = [[ZZTBrowViewController alloc] initWithNibName:@"ZZTBrowViewController" bundle:nil];
+            browse.viewTitle = @"我的收藏";
             browse.hidesBottomBarWhenPushed = YES;
             [self.navigationController pushViewController:browse animated:YES];
         }

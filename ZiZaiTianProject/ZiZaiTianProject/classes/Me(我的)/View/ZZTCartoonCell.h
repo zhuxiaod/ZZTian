@@ -7,8 +7,9 @@
 //
 
 #import <UIKit/UIKit.h>
-
+@class ZZTCartonnPlayModel;
 @interface ZZTCartoonCell : UICollectionViewCell
-@property (weak, nonatomic) IBOutlet UILabel *bookName;
+
+@property (nonatomic,strong)ZZTCartonnPlayModel *cartoon;
 
 @end

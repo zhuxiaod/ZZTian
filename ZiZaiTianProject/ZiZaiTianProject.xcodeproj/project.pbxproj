@@ -7,6 +7,10 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		042A5BE120E7623700F5BA89 /* ZZTCartonnPlayModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 042A5BE020E7623700F5BA89 /* ZZTCartonnPlayModel.m */; };
+		0442951A20E5D52300D1AABF /* ZZTBrowViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 0442951820E5D52300D1AABF /* ZZTBrowViewController.m */; };
+		0442951B20E5D52300D1AABF /* ZZTBrowViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 0442951920E5D52300D1AABF /* ZZTBrowViewController.xib */; };
+		0442952320E5DFE400D1AABF /* ZZTCartoonViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 0442952220E5DFE400D1AABF /* ZZTCartoonViewController.m */; };
 		048C333620E2106200F69CE1 /* ZZTMeViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 048C333420E2106200F69CE1 /* ZZTMeViewController.m */; };
 		048C333F20E211C100F69CE1 /* ZZTMeTopView.m in Sources */ = {isa = PBXBuildFile; fileRef = 048C333E20E211C100F69CE1 /* ZZTMeTopView.m */; };
 		048C334120E2121C00F69CE1 /* ZZTMeTopView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 048C334020E2121C00F69CE1 /* ZZTMeTopView.xib */; };
@@ -32,13 +36,12 @@
 		049A99EA20E394BB00ED27C9 /* ZZTVIPTopView.m in Sources */ = {isa = PBXBuildFile; fileRef = 049A99E820E394BB00ED27C9 /* ZZTVIPTopView.m */; };
 		049A99EB20E394BB00ED27C9 /* ZZTVIPTopView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 049A99E920E394BB00ED27C9 /* ZZTVIPTopView.xib */; };
 		04B9FF4120E506FC007CC582 /* ZZTChildCollectionView.m in Sources */ = {isa = PBXBuildFile; fileRef = 04B9FF3F20E506FB007CC582 /* ZZTChildCollectionView.m */; };
+		04D7D1EB20E64D46008D3969 /* EncryptionTools.m in Sources */ = {isa = PBXBuildFile; fileRef = 04D7D1EA20E64D45008D3969 /* EncryptionTools.m */; };
 		04DE149220E46E88009DF030 /* UIBarButtonItem+Item.m in Sources */ = {isa = PBXBuildFile; fileRef = 04DE149120E46E87009DF030 /* UIBarButtonItem+Item.m */; };
 		04DE149520E4781C009DF030 /* ZZTVIPMidView.m in Sources */ = {isa = PBXBuildFile; fileRef = 04DE149420E4781C009DF030 /* ZZTVIPMidView.m */; };
 		04DE149720E47834009DF030 /* ZZTVIPMidView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 04DE149620E47834009DF030 /* ZZTVIPMidView.xib */; };
 		04DE149A20E48804009DF030 /* ZZTVIPBtView.m in Sources */ = {isa = PBXBuildFile; fileRef = 04DE149920E48804009DF030 /* ZZTVIPBtView.m */; };
 		04DE149C20E4881B009DF030 /* ZZTVIPBtView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 04DE149B20E4881B009DF030 /* ZZTVIPBtView.xib */; };
-		04DE14A320E4C039009DF030 /* ZZTBrowseViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 04DE14A120E4C039009DF030 /* ZZTBrowseViewController.m */; };
-		04DE14A420E4C039009DF030 /* ZZTBrowseViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 04DE14A220E4C039009DF030 /* ZZTBrowseViewController.xib */; };
 		04DE14A720E4C8C1009DF030 /* ZZTTableSwitchView.m in Sources */ = {isa = PBXBuildFile; fileRef = 04DE14A620E4C8C1009DF030 /* ZZTTableSwitchView.m */; };
 		04DE14AB20E4E691009DF030 /* ZZTCartoonCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 04DE14A920E4E691009DF030 /* ZZTCartoonCell.m */; };
 		04DE14AC20E4E691009DF030 /* ZZTCartoonCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 04DE14AA20E4E691009DF030 /* ZZTCartoonCell.xib */; };
@@ -60,6 +63,13 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		042A5BDF20E7623700F5BA89 /* ZZTCartonnPlayModel.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ZZTCartonnPlayModel.h; sourceTree = "<group>"; };
+		042A5BE020E7623700F5BA89 /* ZZTCartonnPlayModel.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ZZTCartonnPlayModel.m; sourceTree = "<group>"; };
+		0442951720E5D52300D1AABF /* ZZTBrowViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ZZTBrowViewController.h; sourceTree = "<group>"; };
+		0442951820E5D52300D1AABF /* ZZTBrowViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ZZTBrowViewController.m; sourceTree = "<group>"; };
+		0442951920E5D52300D1AABF /* ZZTBrowViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ZZTBrowViewController.xib; sourceTree = "<group>"; };
+		0442952120E5DFE400D1AABF /* ZZTCartoonViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ZZTCartoonViewController.h; sourceTree = "<group>"; };
+		0442952220E5DFE400D1AABF /* ZZTCartoonViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ZZTCartoonViewController.m; sourceTree = "<group>"; };
 		048C333320E2106200F69CE1 /* ZZTMeViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ZZTMeViewController.h; sourceTree = "<group>"; };
 		048C333420E2106200F69CE1 /* ZZTMeViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ZZTMeViewController.m; sourceTree = "<group>"; };
 		048C333D20E211C100F69CE1 /* ZZTMeTopView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ZZTMeTopView.h; sourceTree = "<group>"; };
@@ -103,6 +113,8 @@
 		049A99E920E394BB00ED27C9 /* ZZTVIPTopView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = ZZTVIPTopView.xib; sourceTree = "<group>"; };
 		04B9FF3F20E506FB007CC582 /* ZZTChildCollectionView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = ZZTChildCollectionView.m; path = "ZiZaiTianProject/classes/Me(我的)/View/ZZTChildCollectionView.m"; sourceTree = SOURCE_ROOT; };
 		04B9FF4020E506FC007CC582 /* ZZTChildCollectionView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = ZZTChildCollectionView.h; path = "ZiZaiTianProject/classes/Me(我的)/View/ZZTChildCollectionView.h"; sourceTree = SOURCE_ROOT; };
+		04D7D1E920E64D45008D3969 /* EncryptionTools.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EncryptionTools.h; sourceTree = "<group>"; };
+		04D7D1EA20E64D45008D3969 /* EncryptionTools.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = EncryptionTools.m; sourceTree = "<group>"; };
 		04DE149020E46E87009DF030 /* UIBarButtonItem+Item.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIBarButtonItem+Item.h"; sourceTree = "<group>"; };
 		04DE149120E46E87009DF030 /* UIBarButtonItem+Item.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIBarButtonItem+Item.m"; sourceTree = "<group>"; };
 		04DE149320E4781C009DF030 /* ZZTVIPMidView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ZZTVIPMidView.h; sourceTree = "<group>"; };
@@ -111,9 +123,6 @@
 		04DE149820E48804009DF030 /* ZZTVIPBtView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ZZTVIPBtView.h; sourceTree = "<group>"; };
 		04DE149920E48804009DF030 /* ZZTVIPBtView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ZZTVIPBtView.m; sourceTree = "<group>"; };
 		04DE149B20E4881B009DF030 /* ZZTVIPBtView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ZZTVIPBtView.xib; sourceTree = "<group>"; };
-		04DE14A020E4C039009DF030 /* ZZTBrowseViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ZZTBrowseViewController.h; sourceTree = "<group>"; };
-		04DE14A120E4C039009DF030 /* ZZTBrowseViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ZZTBrowseViewController.m; sourceTree = "<group>"; };
-		04DE14A220E4C039009DF030 /* ZZTBrowseViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ZZTBrowseViewController.xib; sourceTree = "<group>"; };
 		04DE14A520E4C8C1009DF030 /* ZZTTableSwitchView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ZZTTableSwitchView.h; sourceTree = "<group>"; };
 		04DE14A620E4C8C1009DF030 /* ZZTTableSwitchView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ZZTTableSwitchView.m; sourceTree = "<group>"; };
 		04DE14A820E4E691009DF030 /* ZZTCartoonCell.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ZZTCartoonCell.h; sourceTree = "<group>"; };
@@ -198,6 +207,8 @@
 				048C335720E24E1600F69CE1 /* ZZTSettingCell.m */,
 				048C335A20E2540F00F69CE1 /* ZZTCell.h */,
 				048C335B20E2540F00F69CE1 /* ZZTCell.m */,
+				042A5BDF20E7623700F5BA89 /* ZZTCartonnPlayModel.h */,
+				042A5BE020E7623700F5BA89 /* ZZTCartonnPlayModel.m */,
 			);
 			name = Model;
 			path = "ZiZaiTianProject/classes/Me(我的)/Model";
@@ -373,9 +384,11 @@
 				049A99D820E3879700ED27C9 /* ZZTVIPViewController.h */,
 				049A99D920E3879700ED27C9 /* ZZTVIPViewController.m */,
 				049A99DA20E3879700ED27C9 /* ZZTVIPViewController.xib */,
-				04DE14A020E4C039009DF030 /* ZZTBrowseViewController.h */,
-				04DE14A120E4C039009DF030 /* ZZTBrowseViewController.m */,
-				04DE14A220E4C039009DF030 /* ZZTBrowseViewController.xib */,
+				0442951720E5D52300D1AABF /* ZZTBrowViewController.h */,
+				0442951820E5D52300D1AABF /* ZZTBrowViewController.m */,
+				0442951920E5D52300D1AABF /* ZZTBrowViewController.xib */,
+				0442952120E5DFE400D1AABF /* ZZTCartoonViewController.h */,
+				0442952220E5DFE400D1AABF /* ZZTCartoonViewController.m */,
 			);
 			path = Controller;
 			sourceTree = "<group>";
@@ -412,6 +425,8 @@
 		F7C04C1220DF43C90055E7A8 /* Category */ = {
 			isa = PBXGroup;
 			children = (
+				04D7D1E920E64D45008D3969 /* EncryptionTools.h */,
+				04D7D1EA20E64D45008D3969 /* EncryptionTools.m */,
 				04DE149020E46E87009DF030 /* UIBarButtonItem+Item.h */,
 				04DE149120E46E87009DF030 /* UIBarButtonItem+Item.m */,
 				049A99C820E32AF600ED27C9 /* UITextField+ZXDTextField.h */,
@@ -492,8 +507,8 @@
 				049A99EB20E394BB00ED27C9 /* ZZTVIPTopView.xib in Resources */,
 				048C334120E2121C00F69CE1 /* ZZTMeTopView.xib in Resources */,
 				F7C04BF320DF3D190055E7A8 /* LaunchScreen.storyboard in Resources */,
-				04DE14A420E4C039009DF030 /* ZZTBrowseViewController.xib in Resources */,
 				049A99BB20E3288400ED27C9 /* ZXDLoginRegisterView.xib in Resources */,
+				0442951B20E5D52300D1AABF /* ZZTBrowViewController.xib in Resources */,
 				04DE149C20E4881B009DF030 /* ZZTVIPBtView.xib in Resources */,
 				049A99DC20E3879700ED27C9 /* ZZTVIPViewController.xib in Resources */,
 				04DE14AC20E4E691009DF030 /* ZZTCartoonCell.xib in Resources */,
@@ -536,6 +551,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				042A5BE120E7623700F5BA89 /* ZZTCartonnPlayModel.m in Sources */,
 				04DE14A720E4C8C1009DF030 /* ZZTTableSwitchView.m in Sources */,
 				048C333F20E211C100F69CE1 /* ZZTMeTopView.m in Sources */,
 				049A99CA20E32AF600ED27C9 /* UIView+Frame.m in Sources */,
@@ -554,11 +570,12 @@
 				F7C04C1B20DF476F0055E7A8 /* ZZTTabBarViewController.m in Sources */,
 				048C335C20E2540F00F69CE1 /* ZZTCell.m in Sources */,
 				049A99D320E32F2F00ED27C9 /* ZZTLoginRegisterViewController.m in Sources */,
+				0442952320E5DFE400D1AABF /* ZZTCartoonViewController.m in Sources */,
 				F7C04C0C20DF3E9E0055E7A8 /* AppDelegate.m in Sources */,
 				049A99B620E3288400ED27C9 /* ZXDButton.m in Sources */,
 				F7C04C2120DF49190055E7A8 /* ZZTHomeViewController.m in Sources */,
-				04DE14A320E4C039009DF030 /* ZZTBrowseViewController.m in Sources */,
 				04DE14AB20E4E691009DF030 /* ZZTCartoonCell.m in Sources */,
+				0442951A20E5D52300D1AABF /* ZZTBrowViewController.m in Sources */,
 				049A99B720E3288400ED27C9 /* ZXDFastLoginView.m in Sources */,
 				048C333620E2106200F69CE1 /* ZZTMeViewController.m in Sources */,
 				F7C04C1820DF44260055E7A8 /* UIBarButtonItem+Item.m in Sources */,
@@ -567,6 +584,7 @@
 				F7C04C2D20DF4F8F0055E7A8 /* UIImage+ColorWithImage.m in Sources */,
 				049A99EA20E394BB00ED27C9 /* ZZTVIPTopView.m in Sources */,
 				04DE149520E4781C009DF030 /* ZZTVIPMidView.m in Sources */,
+				04D7D1EB20E64D46008D3969 /* EncryptionTools.m in Sources */,
 				F7C04C1120DF3FDD0055E7A8 /* ZZTNavigationViewController.m in Sources */,
 				F7C04BF620DF3D190055E7A8 /* main.m in Sources */,
 			);

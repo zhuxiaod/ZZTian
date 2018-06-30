@@ -1,5 +1,7 @@
 target 'ZiZaiTianProject' do
 pod 'MJExtension'
 pod 'AFNetworking'
+pod 'CDDPagerController'
+pod 'SDWebImage', '~> 4.0'
 end
 
