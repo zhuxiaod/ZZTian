@@ -17,6 +17,9 @@
 #import "ZZTCartonnPlayModel.h"
 #import <MJExtension/MJExtension.h>
 #import <SDWebImage/UIImageView+WebCache.h>
+#import "ZZTCircleImage.h"
+#import "ZZTUserModel.h"
+
 #define MyLog(...) NSLog(__VA_ARGS__);
 /** 屏幕尺寸 */
 #define SCREEN_BOUNDS [UIScreen mainScreen].bounds

@@ -12,4 +12,5 @@
 
 @property(nonatomic,strong)NSString *dataIndex;
 
+@property(nonatomic,strong)NSString *cellType;
 @end

@@ -8,6 +8,9 @@
 
 #import "ZZTCartoonViewController.h"
 #import "ZZTCartoonCell.h"
+#import "ZZTAttentionCell.h"
+#import "ZZTMyCircleCellCollectionViewCell.h"
+
 //请求192.168.0.165:8888/great/daiti?id=daiti
 @interface ZZTCartoonViewController ()<UICollectionViewDataSource,UICollectionViewDelegate>
 @property (nonatomic,strong) UICollectionView *collectionView;
@@ -17,6 +20,8 @@
 @property (nonatomic,strong) NSString *getData;
 //cartoons
 @property (nonatomic,strong) NSArray *cartoons;
+
+@property (nonatomic,strong) NSArray *books;
 @end
 
 
@@ -36,6 +41,14 @@
     }
     return _cartoons;
 }
+
+- (NSArray *)books{
+    if (!_books) {
+        _books = [NSArray array];
+    }
+    return _books;
+}
+
 - (AFHTTPSessionManager *)manager
 {
     if (!_manager) {
@@ -44,7 +57,10 @@
     return _manager;
 }
 
+//cell注册(控制)
 static NSString *collectionID = @"collectionID";
+static NSString *AttentionCell = @"AttentionCell";
+static NSString *circleCell = @"circleCell";
 
 - (void)viewDidLoad {
     [super viewDidLoad];
@@ -54,12 +70,21 @@ static NSString *collectionID = @"collectionID";
 
     //创建UICollectionView：黑色
     [self setupCollectionView:layout];
+
     //注册cell
-    UINib *nib = [UINib nibWithNibName:@"ZZTCartoonCell" bundle:[NSBundle mainBundle]];
-    [self.collectionView registerNib:nib forCellWithReuseIdentifier:collectionID];
+    [self registerCell];
+}
+
+#pragma mark 注册Cell(控制)
+-(void)registerCell{
+    UINib *nib1= [UINib nibWithNibName:@"ZZTCartoonCell" bundle:[NSBundle mainBundle]];
+    [self.collectionView registerNib:nib1 forCellWithReuseIdentifier:collectionID];
     
-    //加载数据
-    [self loadData];
+    UINib *nib2= [UINib nibWithNibName:@"ZZTAttentionCell" bundle:[NSBundle mainBundle]];
+    [self.collectionView registerNib:nib2 forCellWithReuseIdentifier:AttentionCell];
+    
+    UINib *nib3= [UINib nibWithNibName:@"ZZTMyCircleCellCollectionViewCell" bundle:[NSBundle mainBundle]];
+    [self.collectionView registerNib:nib3 forCellWithReuseIdentifier:circleCell];
 }
 
 -(void)loadData{
@@ -69,6 +94,7 @@ static NSString *collectionID = @"collectionID";
                                 @"userId":@"1",
                                 @"type":self.dataIndex
                                 };
+    NSLog(@"index:%@",self.dataIndex);
     [self.manager POST:@"http://192.168.0.165:8888/great/userCollect" parameters:paramDict progress:nil success:^(NSURLSessionDataTask * _Nonnull task, id  _Nullable responseObject) {
         NSLog(@"%@---%@",[responseObject class],responseObject);
         self.getData = responseObject[@"result"];
@@ -76,6 +102,7 @@ static NSString *collectionID = @"collectionID";
         [self decry];
     } failure:^(NSURLSessionDataTask * _Nullable task, NSError * _Nonnull error) {
         NSLog(@"请求失败 -- %@",error);
+        [self failure];
     }];
 }
 
@@ -87,17 +114,28 @@ static NSString *collectionID = @"collectionID";
     NSDictionary *dic = [NSJSONSerialization JSONObjectWithData:jsonData options:NSJSONReadingMutableContainers error:nil];
     NSLog(@"data:%@",data);
     //转模型
-    NSArray *books = [ZZTCartonnPlayModel mj_objectArrayWithKeyValuesArray:dic];
-    self.cartoons = books;
+    self.books = [ZZTCartonnPlayModel mj_objectArrayWithKeyValuesArray:dic];
+    
+    self.cartoons = self.books;
     //刷新
     [self.collectionView reloadData];
 }
-
+//没有请求到
+-(void)failure{
+    self.cartoons = nil;
+}
 #pragma mark - 创建流水布局
 -(UICollectionViewFlowLayout *)setupCollectionViewFlowLayout{
     
     UICollectionViewFlowLayout *layout = [[UICollectionViewFlowLayout alloc]init];
-    layout.itemSize = CGSizeMake(120,200);
+    //修改尺寸(控制)
+    if([self.cellType isEqualToString:@"collection"]){
+        layout.itemSize = CGSizeMake(120,200);
+    }else if ([self.cellType isEqualToString:@"tableView1"]){
+        layout.itemSize = CGSizeMake(Screen_Width,100);
+    }else if ([self.cellType isEqualToString:@"tableView2"]){
+        layout.itemSize = CGSizeMake(Screen_Width,100);
+    }
     layout.scrollDirection = UICollectionViewScrollDirectionVertical;
     //行距
     layout.minimumLineSpacing = 0;
@@ -124,11 +162,36 @@ static NSString *collectionID = @"collectionID";
 
 - (UICollectionViewCell *)collectionView:(UICollectionView *)collectionView cellForItemAtIndexPath:(NSIndexPath *)indexPath
 {
-    ZZTCartoonCell *cell = [collectionView dequeueReusableCellWithReuseIdentifier:collectionID forIndexPath:indexPath];
-    ZZTCartonnPlayModel *car = self.cartoons[indexPath.row];
-    if (car) {
-        cell.cartoon = car;
+    //cell类型改变
+    //model改变(控制)
+    UICollectionViewCell *cell = [[UICollectionViewCell alloc] init];
+    if([self.cellType isEqualToString:@"collection"]){
+        ZZTCartoonCell *cell = [collectionView dequeueReusableCellWithReuseIdentifier:collectionID forIndexPath:indexPath];
+        ZZTCartonnPlayModel *car = self.cartoons[indexPath.row];
+        if (car) {
+            cell.cartoon = car;
+        }
+        return cell;
+    }else if ([self.cellType isEqualToString:@"tableView2"]){
+        ZZTAttentionCell *cell = [collectionView dequeueReusableCellWithReuseIdentifier:AttentionCell forIndexPath:indexPath];
+        ZZTCartonnPlayModel *car = self.cartoons[indexPath.row];
+        if (car) {
+            cell.cartoon = car;
+        }
+        return cell;
+    }else if ([self.cellType isEqualToString:@"tableView1"]){
+        ZZTMyCircleCellCollectionViewCell *cell = [collectionView dequeueReusableCellWithReuseIdentifier:circleCell forIndexPath:indexPath];
+        ZZTCartonnPlayModel *car = self.cartoons[indexPath.row];
+        if (car) {
+            cell.cartoon = car;
+        }
+        return cell;
     }
     return cell;
+}
+//加载数据
+- (void)viewWillAppear:(BOOL)animated
+{
+    [self loadData];
 }
 @end

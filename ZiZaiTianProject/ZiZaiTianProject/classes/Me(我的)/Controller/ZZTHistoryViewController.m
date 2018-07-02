@@ -1,31 +1,22 @@
 //
-//  ZZTBrowViewController.m
+//  ZZTHistoryViewController.m
 //  ZiZaiTianProject
 //
-//  Created by mac on 2018/6/29.
+//  Created by mac on 2018/7/2.
 //  Copyright © 2018年 zxd. All rights reserved.
 //
 
-#import "ZZTBrowViewController.h"
+#import "ZZTHistoryViewController.h"
 #import "ZZTCartoonViewController.h"
 
-@interface ZZTBrowViewController ()
-
+@interface ZZTHistoryViewController ()
 @property (weak, nonatomic) IBOutlet UIView *topBar;
 @property (weak, nonatomic) IBOutlet UILabel *viewControllerTitle;
-
 @property (strong,nonatomic) AFHTTPSessionManager *manager;
 
 @end
 
-@implementation ZZTBrowViewController
-
-#pragma mark - LazyLoad
--(void)viewWillAppear:(BOOL)animated
-{
-    [super viewWillAppear:animated];
-}
-
+@implementation ZZTHistoryViewController
 #pragma mark - 懒加载
 - (AFHTTPSessionManager *)manager
 {
@@ -35,39 +26,23 @@
     return _manager;
 }
 
-#pragma mark - LifeCyle
 - (void)viewDidLoad {
     [super viewDidLoad];
     [self setupTitle];
-   
     
     self.automaticallyAdjustsScrollViewInsets = NO;
+
     //添加子页
     [self setUpAllChildViewController];
+    
     //设置滑动栏的样式
     [self setupStyle];
-    //加载数据
-//    [self loadData];
+    
 }
 
 -(void)setupTitle{
-    [_viewControllerTitle setText:_viewTitle];
+    [_viewControllerTitle setText:@"浏览历史"];
 }
-#pragma mark - 加载数据
--(void)loadData{
-    //等下调试接口
-    //请求参数
-    NSDictionary *paramDict = @{
-                                @"userId":@"1"
-                                };
-    
-    [self.manager POST:[NSString stringWithFormat:@"http://192.168.0.165:8888/great/%@",[self.dic objectForKey:@"接口"]] parameters:paramDict progress:nil success:^(NSURLSessionDataTask * _Nonnull task, id  _Nullable responseObject) {
-        NSLog(@"%@---%@",[responseObject class],responseObject);
-    } failure:^(NSURLSessionDataTask * _Nullable task, NSError * _Nonnull error) {
-        NSLog(@"请求失败 -- %@",error);
-    }];
-}
-
 #pragma mark - 设置样式
 -(void)setupStyle{
     [self setUpDisplayStyle:^(UIColor *__autoreleasing *titleScrollViewBgColor, UIColor *__autoreleasing *norColor, UIColor *__autoreleasing *selColor, UIColor *__autoreleasing *proColor, UIFont *__autoreleasing *titleFont, CGFloat *titleButtonWidth, BOOL *isShowPregressView, BOOL *isOpenStretch, BOOL *isOpenShade) {
@@ -76,31 +51,31 @@
         *selColor = [UIColor purpleColor];              //标题选中颜色（默认选中状态下字体颜色为红色）
         *proColor = [UIColor purpleColor];              //滚动条颜色（默认为标题选中颜色）
         *titleFont = [UIFont systemFontOfSize:16];      //字体尺寸 (默认fontSize为15)
-
-//        *titleButtonWidth = 100;                        //标题按钮的宽度（有默认值）
-
+        
+//                *titleButtonWidth = 100;                        //标题按钮的宽度（有默认值）
+        
         /*
          以下BOOL值默认都为NO
          */
-
+        
         *isShowPregressView = YES;                      //是否开启标题下部Pregress指示器
         *isOpenStretch = YES;                           //是否开启指示器拉伸效果
         *isOpenShade = YES;                             //是否开启字体渐变
     }];
-//
+    //
     [self setUpTopTitleViewAttribute:^(CGFloat *topDistance, CGFloat *titleViewHeight, CGFloat *bottomDistance) {
         *topDistance = 64;
     }];
-//
-//    [self setUpProgressAttribute:^(CGFloat *progressLength, CGFloat *progressHeight) {
-//        *progressHeight = 3;
-//
-//    }];
+    //
+    //    [self setUpProgressAttribute:^(CGFloat *progressLength, CGFloat *progressHeight) {
+    //        *progressHeight = 3;
+    //
+    //    }];
 }
 #pragma mark - 添加所有子控制器
 - (void)setUpAllChildViewController
 {
-    //传个参数 知道是什么类型的  切换CELL 模型 
+    //传个参数 知道是什么类型的  切换CELL 模型
     //index1
     ZZTCartoonViewController *carttonVC = [[ZZTCartoonViewController alloc] init];
     carttonVC.title = [self.dic objectForKey:@"index1"];
@@ -115,12 +90,18 @@
     playVC.cellType = [self.dic objectForKey:@"cellType"];
     playVC.view.backgroundColor = [UIColor yellowColor];
     [self addChildViewController:playVC];
+    //index3
+    ZZTCartoonViewController *findVC = [[ZZTCartoonViewController alloc] init];
+    findVC.title = [self.dic objectForKey:@"index3"];
+    findVC.dataIndex = @"2";
+    findVC.cellType = [self.dic objectForKey:@"cellType"];
+    findVC.view.backgroundColor = [UIColor yellowColor];
+    [self addChildViewController:findVC];
 }
 
-- (IBAction)disMis:(UIButton *)sender {
-
-    [self.navigationController popViewControllerAnimated:YES];
+- (IBAction)clickBackBtn:(UIButton *)sender {
     
-}
+    [self.navigationController popViewControllerAnimated:YES];
 
+}
 @end

@@ -5,7 +5,7 @@
 //  Created by mac on 2018/6/26.
 //  Copyright © 2018年 zxd. All rights reserved.
 //
-
+#import "ZZTSignInView.h"
 #import "ZZTMeViewController.h"
 #import "ZZTMeTopView.h"
 #import "ZZTMeCell.h"
@@ -15,13 +15,21 @@
 #import "ZZTLoginRegisterViewController.h"
 #import "ZZTVIPViewController.h"
 #import "ZZTBrowViewController.h"
-
+#import "ZZTHistoryViewController.h"
 @interface ZZTMeViewController ()<UITableViewDataSource,UITableViewDelegate>
 @property (weak, nonatomic) IBOutlet UIView *topView;
 @property(nonatomic,strong) UITableView *tableView;
 //cell数据
-@property (nonatomic, strong) NSArray *cellData;
+@property (nonatomic,strong) NSArray *cellData;
 
+@property (nonatomic,strong) AFHTTPSessionManager *manager;
+
+//获得数据
+@property (nonatomic,strong) NSString *getData;
+
+@property (nonatomic,strong) EncryptionTools *encryptionManager;
+
+@property (nonatomic,strong) ZZTUserModel *userData;
 @end
 
 @implementation ZZTMeViewController
@@ -38,11 +46,31 @@ NSString *bannerID = @"MeCell";
 }
 
 #pragma mark - 请求数据
--(void)getData{
-    
-  
-}
+//-(void)getData{
+//
+//
+//}
 
+#pragma mark - 懒加载
+- (EncryptionTools *)encryptionManager{
+    if(!_encryptionManager){
+        _encryptionManager = [EncryptionTools sharedEncryptionTools];
+    }
+    return _encryptionManager;
+}
+-(ZZTUserModel *)userData{
+    if (!_userData) {
+        _userData = [[ZZTUserModel alloc] init];
+    }
+    return _userData;
+}
+- (AFHTTPSessionManager *)manager
+{
+    if (!_manager) {
+        _manager = [AFHTTPSessionManager manager];
+    }
+    return _manager;
+}
 #pragma mark - 设置tableView
 -(void)setupTab
 {
@@ -86,7 +114,29 @@ NSString *bannerID = @"MeCell";
         [self presentViewController:loginView animated:YES completion:nil];
 
     }else{
-        NSLog(@"我是签到");
+        //确定已签到的次数
+        NSInteger signCount =  _userData.signCount;
+        //判断当天是不是应该签到
+        NSInteger ifsigin = _userData.ifsign;
+        //如果连续天数 为1
+        //没有签到  第一天签了  今天没签
+        //签到 第一天签了 今天也签到了  已领取
+        ZZTSignInView *signView = [ZZTSignInView SignView];
+        [signView isget:signCount isSign:ifsigin];
+        [self.view addSubview:signView];
+        
+
+        
+        
+        
+        
+        
+        
+//        //签到
+//        //取数据
+//        //连续签到数
+//
+//        //通过数据去建立btn
     }
 }
 #pragma mark - tableView
@@ -160,16 +210,48 @@ NSString *bannerID = @"MeCell";
             VIPView.hidesBottomBarWhenPushed = YES;
 
             [self.navigationController pushViewController:VIPView animated:YES];
+        }else if (indexPath.row == 2){
+            ZZTBrowViewController *myAttentionVC = [[ZZTBrowViewController alloc] initWithNibName:@"ZZTBrowViewController" bundle:nil];
+            myAttentionVC.viewTitle = @"我的关注";
+            myAttentionVC.hidesBottomBarWhenPushed = YES;
+            [self.navigationController pushViewController:myAttentionVC animated:YES];
+        }
+    }else if (indexPath.section == 2){
+        if (indexPath.row == 1) {
+            NSDictionary *dic = @{@"index1":@"已浏览",@"index2":@"已加入",@"connector":@"userCollect",@"cellType":@"tableView1"};
+            ZZTBrowViewController *myCircleVC = [[ZZTBrowViewController alloc] initWithNibName:@"ZZTBrowViewController" bundle:nil];
+            myCircleVC.viewTitle = @"我的圈子";
+            myCircleVC.dic = dic;
+            myCircleVC.hidesBottomBarWhenPushed = YES;
+            [self.navigationController pushViewController:myCircleVC animated:YES];
+        }else if (indexPath.row == 2){
+            NSDictionary *dic = @{@"index1":@"用户",@"index2":@"作者",@"connector":@"userCollect",@"cellType":@"tableView2"};
+            ZZTBrowViewController *myAttentionVC = [[ZZTBrowViewController alloc] initWithNibName:@"ZZTBrowViewController" bundle:nil];
+            myAttentionVC.viewTitle = @"我的关注";
+            myAttentionVC.dic = dic;
+            myAttentionVC.hidesBottomBarWhenPushed = YES;
+            [self.navigationController pushViewController:myAttentionVC animated:YES];
         }
     }else if(indexPath.section == 3){
         if(indexPath.row == 0){
+            NSDictionary *dic = @{@"index1":@"漫画",@"index2":@"剧本",@"connector":@"userCollect",@"cellType":@"collection"};
             ZZTBrowViewController *participationView = [[ZZTBrowViewController alloc] initWithNibName:@"ZZTBrowViewController" bundle:nil];
             participationView.viewTitle = @"参与作品";
+            participationView.dic = dic;
             participationView.hidesBottomBarWhenPushed = YES;
             [self.navigationController pushViewController:participationView animated:YES];
         }else if(indexPath.row == 1){
+            NSDictionary *dic = @{@"index1":@"漫画",@"index2":@"剧本",@"connector":@"userCollect",@"cellType":@"collection"};
             ZZTBrowViewController *browse = [[ZZTBrowViewController alloc] initWithNibName:@"ZZTBrowViewController" bundle:nil];
             browse.viewTitle = @"我的收藏";
+            browse.dic = dic;
+            browse.hidesBottomBarWhenPushed = YES;
+            [self.navigationController pushViewController:browse animated:YES];
+        }else if(indexPath.row == 2){
+            NSDictionary *dic = @{@"index1":@"漫画",@"index2":@"剧本",@"index3":@"发现",@"connector":@"userCollect",@"cellType":@"collection"};
+            ZZTHistoryViewController *browse = [[ZZTHistoryViewController alloc] initWithNibName:@"ZZTHistoryViewController" bundle:nil];
+            browse.viewTitle = @"浏览历史";
+            browse.dic = dic;
             browse.hidesBottomBarWhenPushed = YES;
             [self.navigationController pushViewController:browse animated:YES];
         }
@@ -181,5 +263,27 @@ NSString *bannerID = @"MeCell";
     [super viewWillAppear:animated];
     //隐藏Bar
     [self.navigationController setNavigationBarHidden:YES animated:YES];
+    //加载用户信息
+    [self loadUserData];
+}
+-(void)loadUserData{
+    NSDictionary *paramDict = @{
+                                @"userId":@"1"
+                                };
+    [self.manager POST:@"http://192.168.0.165:8888/login/usersInfo" parameters:paramDict progress:nil success:^(NSURLSessionDataTask * _Nonnull task, id  _Nullable responseObject) {
+        self.getData = responseObject[@"result"];
+        
+        [self decry];
+        
+    } failure:^(NSURLSessionDataTask * _Nullable task, NSError * _Nonnull error) {
+        
+    }];
+}
+-(void)decry{
+    //解密
+    NSString *data = [self.encryptionManager decryptString:self.getData keyString:@"ZIZAITIAN@666666" iv:[@"A-16-Byte-String" dataUsingEncoding:NSUTF8StringEncoding]];
+    NSData *jsonData = [data dataUsingEncoding:NSUTF8StringEncoding];
+    NSMutableArray *dic = [NSJSONSerialization JSONObjectWithData:jsonData options:NSJSONReadingMutableContainers error:nil];
+    self.userData = [ZZTUserModel mj_objectWithKeyValues:dic[0]];
 }
 @end
