@@ -28,6 +28,7 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
+    
     [self setupTitle];
     
     self.automaticallyAdjustsScrollViewInsets = NO;
@@ -51,31 +52,19 @@
         *selColor = [UIColor purpleColor];              //标题选中颜色（默认选中状态下字体颜色为红色）
         *proColor = [UIColor purpleColor];              //滚动条颜色（默认为标题选中颜色）
         *titleFont = [UIFont systemFontOfSize:16];      //字体尺寸 (默认fontSize为15)
-        
-//                *titleButtonWidth = 100;                        //标题按钮的宽度（有默认值）
-        
-        /*
-         以下BOOL值默认都为NO
-         */
-        
         *isShowPregressView = YES;                      //是否开启标题下部Pregress指示器
         *isOpenStretch = YES;                           //是否开启指示器拉伸效果
         *isOpenShade = YES;                             //是否开启字体渐变
     }];
-    //
+
     [self setUpTopTitleViewAttribute:^(CGFloat *topDistance, CGFloat *titleViewHeight, CGFloat *bottomDistance) {
         *topDistance = 64;
     }];
-    //
-    //    [self setUpProgressAttribute:^(CGFloat *progressLength, CGFloat *progressHeight) {
-    //        *progressHeight = 3;
-    //
-    //    }];
+
 }
 #pragma mark - 添加所有子控制器
 - (void)setUpAllChildViewController
 {
-    //传个参数 知道是什么类型的  切换CELL 模型
     //index1
     ZZTCartoonViewController *carttonVC = [[ZZTCartoonViewController alloc] init];
     carttonVC.title = [self.dic objectForKey:@"index1"];
@@ -98,7 +87,7 @@
     findVC.view.backgroundColor = [UIColor yellowColor];
     [self addChildViewController:findVC];
 }
-
+//返回上一页
 - (IBAction)clickBackBtn:(UIButton *)sender {
     
     [self.navigationController popViewControllerAnimated:YES];

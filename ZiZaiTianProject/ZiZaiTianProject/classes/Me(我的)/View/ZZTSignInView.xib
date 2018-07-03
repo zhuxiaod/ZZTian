@@ -16,6 +16,13 @@
             <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
             <subviews>
+                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="AB2-JE-aV5">
+                    <rect key="frame" x="0.0" y="20" width="375" height="647"/>
+                    <state key="normal" title="Button"/>
+                    <connections>
+                        <action selector="clickBackground:" destination="iN0-l3-epB" eventType="touchUpInside" id="mq5-76-m81"/>
+                    </connections>
+                </button>
                 <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="VTk-Cm-qOg">
                     <rect key="frame" x="100" y="148" width="175" height="330"/>
                     <subviews>
@@ -377,7 +384,11 @@
             <color key="backgroundColor" white="0.0" alpha="0.6739886558219178" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
             <constraints>
                 <constraint firstItem="VTk-Cm-qOg" firstAttribute="centerX" secondItem="iN0-l3-epB" secondAttribute="centerX" id="AN2-RY-Xpm"/>
+                <constraint firstItem="AB2-JE-aV5" firstAttribute="leading" secondItem="vUN-kp-3ea" secondAttribute="leading" id="RXy-UO-87d"/>
                 <constraint firstItem="vUN-kp-3ea" firstAttribute="bottom" secondItem="VTk-Cm-qOg" secondAttribute="bottom" constant="189" id="Tfd-dE-wQy"/>
+                <constraint firstItem="AB2-JE-aV5" firstAttribute="top" secondItem="vUN-kp-3ea" secondAttribute="top" id="TnT-i9-TU2"/>
+                <constraint firstItem="AB2-JE-aV5" firstAttribute="trailing" secondItem="vUN-kp-3ea" secondAttribute="trailing" id="ckR-Z2-Kzy"/>
+                <constraint firstItem="vUN-kp-3ea" firstAttribute="bottom" secondItem="AB2-JE-aV5" secondAttribute="bottom" id="mBB-aV-W0F"/>
                 <constraint firstItem="VTk-Cm-qOg" firstAttribute="top" secondItem="vUN-kp-3ea" secondAttribute="top" constant="128" id="pLX-24-wQE"/>
                 <constraint firstItem="VTk-Cm-qOg" firstAttribute="leading" secondItem="vUN-kp-3ea" secondAttribute="leading" constant="100" id="qEi-lp-Gu6"/>
             </constraints>
@@ -390,8 +401,9 @@
                 <outlet property="day5" destination="Sb8-Z2-Znc" id="7G2-Ve-gk4"/>
                 <outlet property="day6" destination="ZNZ-En-O08" id="clZ-FZ-zY9"/>
                 <outlet property="day7" destination="5dc-1G-BOg" id="q0A-nA-x43"/>
+                <outlet property="eventView" destination="VTk-Cm-qOg" id="0iu-SD-4dV"/>
             </connections>
-            <point key="canvasLocation" x="22" y="64"/>
+            <point key="canvasLocation" x="21.5" y="63.5"/>
         </view>
     </objects>
 </document>

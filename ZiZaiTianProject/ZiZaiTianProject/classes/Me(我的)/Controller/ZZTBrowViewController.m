@@ -38,16 +38,15 @@
 #pragma mark - LifeCyle
 - (void)viewDidLoad {
     [super viewDidLoad];
+    
     [self setupTitle];
    
-    
     self.automaticallyAdjustsScrollViewInsets = NO;
     //添加子页
     [self setUpAllChildViewController];
+    
     //设置滑动栏的样式
     [self setupStyle];
-    //加载数据
-//    [self loadData];
 }
 
 -(void)setupTitle{
@@ -55,7 +54,6 @@
 }
 #pragma mark - 加载数据
 -(void)loadData{
-    //等下调试接口
     //请求参数
     NSDictionary *paramDict = @{
                                 @"userId":@"1"
@@ -77,25 +75,15 @@
         *proColor = [UIColor purpleColor];              //滚动条颜色（默认为标题选中颜色）
         *titleFont = [UIFont systemFontOfSize:16];      //字体尺寸 (默认fontSize为15)
 
-//        *titleButtonWidth = 100;                        //标题按钮的宽度（有默认值）
-
-        /*
-         以下BOOL值默认都为NO
-         */
-
         *isShowPregressView = YES;                      //是否开启标题下部Pregress指示器
         *isOpenStretch = YES;                           //是否开启指示器拉伸效果
         *isOpenShade = YES;                             //是否开启字体渐变
     }];
-//
+
     [self setUpTopTitleViewAttribute:^(CGFloat *topDistance, CGFloat *titleViewHeight, CGFloat *bottomDistance) {
         *topDistance = 64;
     }];
-//
-//    [self setUpProgressAttribute:^(CGFloat *progressLength, CGFloat *progressHeight) {
-//        *progressHeight = 3;
-//
-//    }];
+
 }
 #pragma mark - 添加所有子控制器
 - (void)setUpAllChildViewController
@@ -116,7 +104,7 @@
     playVC.view.backgroundColor = [UIColor yellowColor];
     [self addChildViewController:playVC];
 }
-
+//返回上一页
 - (IBAction)disMis:(UIButton *)sender {
 
     [self.navigationController popViewControllerAnimated:YES];

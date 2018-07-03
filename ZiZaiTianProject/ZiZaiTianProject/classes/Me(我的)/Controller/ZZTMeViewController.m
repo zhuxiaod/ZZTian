@@ -16,7 +16,9 @@
 #import "ZZTVIPViewController.h"
 #import "ZZTBrowViewController.h"
 #import "ZZTHistoryViewController.h"
-@interface ZZTMeViewController ()<UITableViewDataSource,UITableViewDelegate>
+#import "ZZTSettingViewController.h"
+
+@interface ZZTMeViewController ()<UITableViewDataSource,UITableViewDelegate,ZZTSignInViewDelegate>
 @property (weak, nonatomic) IBOutlet UIView *topView;
 @property(nonatomic,strong) UITableView *tableView;
 //cell数据
@@ -30,26 +32,14 @@
 @property (nonatomic,strong) EncryptionTools *encryptionManager;
 
 @property (nonatomic,strong) ZZTUserModel *userData;
+
+@property (nonatomic,strong) ZZTSignInView *signView;
 @end
 
 @implementation ZZTMeViewController
 
 //cell的标识
 NSString *bannerID = @"MeCell";
-
-- (void)viewDidLoad {
-    [super viewDidLoad];
-    //请求数据
-    [self getData];
-    //设置table
-    [self setupTab];
-}
-
-#pragma mark - 请求数据
-//-(void)getData{
-//
-//
-//}
 
 #pragma mark - 懒加载
 - (EncryptionTools *)encryptionManager{
@@ -71,18 +61,25 @@ NSString *bannerID = @"MeCell";
     }
     return _manager;
 }
+
+- (void)viewDidLoad {
+    [super viewDidLoad];
+    //请求数据
+    [self getData];
+    //设置table
+    [self setupTab];
+}
+
+
 #pragma mark - 设置tableView
 -(void)setupTab
 {
-    //创建静态的tableView
-//    _tableView.backgroundColor = [UIColor colorWithHexString:@"#58006E"];
     _tableView = [[UITableView alloc] initWithFrame:CGRectMake(0, 0, self.view.bounds.size.width, self.view.bounds.size.height) style:UITableViewStyleGrouped];
     _tableView.sectionHeaderHeight = 10;
     _tableView.sectionFooterHeight = 0;
     _tableView.dataSource = self;
     _tableView.delegate = self;
-    //行高
-//    _tableView.rowHeight = 50;
+
     //隐藏滚动条
     _tableView.showsVerticalScrollIndicator = NO;
     //添加头视图
@@ -95,8 +92,7 @@ NSString *bannerID = @"MeCell";
         [self buttonClick:sender];
     };
 }
-
-
+#pragma mark - headView
 -(void)buttonClick:(UIButton *)button{
     if (button.tag == 0) {
         NSLog(@"我是z币");
@@ -115,29 +111,37 @@ NSString *bannerID = @"MeCell";
 
     }else{
         //确定已签到的次数
-        NSInteger signCount =  _userData.signCount;
+        NSInteger signCount = _userData.signCount;
         //判断当天是不是应该签到
         NSInteger ifsigin = _userData.ifsign;
-        //如果连续天数 为1
-        //没有签到  第一天签了  今天没签
-        //签到 第一天签了 今天也签到了  已领取
-        ZZTSignInView *signView = [ZZTSignInView SignView];
-        [signView isget:signCount isSign:ifsigin];
-        [self.view addSubview:signView];
         
+        NSLog(@"signCount:%ld",_userData.signCount);
+        NSLog(@"ifsigin:%ld",(long)_userData.ifsign);
 
-        
-        
-        
-        
-        
-        
-//        //签到
-//        //取数据
-//        //连续签到数
-//
-//        //通过数据去建立btn
+        //添加签到页面
+        _signView = [ZZTSignInView SignView];
+        [_signView isget:signCount isSign:ifsigin];
+        [self.view addSubview:_signView];
+        _signView.delegate = self;
+
     }
+}
+#pragma mark - ZZTSignInViewDelegate
+-(void)signViewDidClickSignBtn:(ZZTSignButton *)btn
+{
+    NSDictionary *paramDict = @{
+                                @"userId":@"23"
+                                };
+    [self.manager POST:@"http://192.168.0.165:8888/record/userSign" parameters:paramDict progress:nil success:^(NSURLSessionDataTask * _Nonnull task, id  _Nullable responseObject) {
+        [self loadUserData];
+    } failure:^(NSURLSessionDataTask * _Nullable task, NSError * _Nonnull error) {
+        NSLog(@"请求失败 -- %@",error);
+    }];
+}
+-(void)signViewDidClickapGesture{
+    
+    [_signView removeFromSuperview];
+    
 }
 #pragma mark - tableView
 -(NSInteger)numberOfSectionsInTableView:(UITableView *)tableView
@@ -255,9 +259,13 @@ NSString *bannerID = @"MeCell";
             browse.hidesBottomBarWhenPushed = YES;
             [self.navigationController pushViewController:browse animated:YES];
         }
+    }else{
+            ZZTSettingViewController *settingVC = [[ZZTSettingViewController alloc] init];
+            settingVC.hidesBottomBarWhenPushed = YES;
+            [self.navigationController pushViewController:settingVC animated:YES];
     }
 }
-
+#pragma mark - 请求数据
 -(void)viewWillAppear:(BOOL)animated
 {
     [super viewWillAppear:animated];
@@ -268,7 +276,7 @@ NSString *bannerID = @"MeCell";
 }
 -(void)loadUserData{
     NSDictionary *paramDict = @{
-                                @"userId":@"1"
+                                @"userId":@"23"
                                 };
     [self.manager POST:@"http://192.168.0.165:8888/login/usersInfo" parameters:paramDict progress:nil success:^(NSURLSessionDataTask * _Nonnull task, id  _Nullable responseObject) {
         self.getData = responseObject[@"result"];

@@ -10,9 +10,10 @@
 
 @interface ZZTSignButton : UIButton
 
-//已经签到
+//连续打卡
 @property (nonatomic,assign) BOOL isGet;
-//今天是否已经签到
+//当天是否打卡
 @property (nonatomic,assign) BOOL ifSign;
-
+//后面都没打卡
+@property (nonatomic,assign) BOOL isNo;
 @end

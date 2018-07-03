@@ -30,14 +30,14 @@
                             <constraints>
                                 <constraint firstAttribute="height" constant="30" id="NVm-Zt-zDm"/>
                             </constraints>
-                            <state key="normal" title="&lt;">
+                            <state key="normal" image="navigationButtonReturn">
                                 <color key="titleColor" white="0.66666666669999997" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                             </state>
                             <connections>
                                 <action selector="clickBackBtn:" destination="-1" eventType="touchUpInside" id="r1a-Bn-Nju"/>
                             </connections>
                         </button>
-                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="PQp-hg-P9F">
+                        <button opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="252" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="PQp-hg-P9F">
                             <rect key="frame" x="324" y="7" width="37" height="30"/>
                             <constraints>
                                 <constraint firstAttribute="height" constant="30" id="BTN-tZ-uoN"/>
@@ -79,4 +79,7 @@
             <viewLayoutGuide key="safeArea" id="Q5M-cg-NOt"/>
         </view>
     </objects>
+    <resources>
+        <image name="navigationButtonReturn" width="15" height="21"/>
+    </resources>
 </document>
