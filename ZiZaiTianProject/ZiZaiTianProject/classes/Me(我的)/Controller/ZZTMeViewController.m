@@ -17,6 +17,7 @@
 #import "ZZTBrowViewController.h"
 #import "ZZTHistoryViewController.h"
 #import "ZZTSettingViewController.h"
+#import "ZZTMeEditViewController.h"
 
 @interface ZZTMeViewController ()<UITableViewDataSource,UITableViewDelegate,ZZTSignInViewDelegate>
 @property (weak, nonatomic) IBOutlet UIView *topView;
@@ -105,9 +106,11 @@ NSString *bannerID = @"MeCell";
         NSLog(@"我是消息");
     }
     else if(button.tag == 4){
+        ZZTMeEditViewController *meEditVC = [[ZZTMeEditViewController alloc]initWithNibName:@"ZZTMeEditViewController" bundle:nil];
+        [self.navigationController pushViewController:meEditVC animated:YES];
         
-        ZZTLoginRegisterViewController *loginView = [[ZZTLoginRegisterViewController alloc]initWithNibName:@"ZZTLoginRegisterViewController" bundle:nil];
-        [self presentViewController:loginView animated:YES completion:nil];
+//        ZZTLoginRegisterViewController *loginView = [[ZZTLoginRegisterViewController alloc]initWithNibName:@"ZZTLoginRegisterViewController" bundle:nil];
+//        [self presentViewController:loginView animated:YES completion:nil];
 
     }else{
         //确定已签到的次数

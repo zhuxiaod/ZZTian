@@ -14,6 +14,7 @@ PODS:
   - AFNetworking/Serialization (3.2.1)
   - AFNetworking/UIKit (3.2.1):
     - AFNetworking/NSURLSession
+  - BAPickView (1.1.4)
   - CDDPagerController (1.1.5)
   - MJExtension (3.0.15.1)
   - SDWebImage (4.4.1):
@@ -22,6 +23,7 @@ PODS:
 
 DEPENDENCIES:
   - AFNetworking
+  - BAPickView
   - CDDPagerController
   - MJExtension
   - SDWebImage (~> 4.0)
@@ -29,16 +31,18 @@ DEPENDENCIES:
 SPEC REPOS:
   https://github.com/cocoapods/specs.git:
     - AFNetworking
+    - BAPickView
     - CDDPagerController
     - MJExtension
     - SDWebImage
 
 SPEC CHECKSUMS:
   AFNetworking: b6f891fdfaed196b46c7a83cf209e09697b94057
+  BAPickView: dbabd31468df83df1b1e5f218e28a8a41908e000
   CDDPagerController: ed05951429a860c56cfdffbeba1a8af5132a28ae
   MJExtension: 19bc33ce2eee2d319760f5622562cf581a6ff756
   SDWebImage: 47e9b5b925cbce75946c23f0c42dd19464189af4
 
-PODFILE CHECKSUM: 61977c81a714d4eb31cc02d968ce9c31c9154992
+PODFILE CHECKSUM: 8fe2d6925f098a43ffe6bf6366997cfaad626d83
 
 COCOAPODS: 1.5.3

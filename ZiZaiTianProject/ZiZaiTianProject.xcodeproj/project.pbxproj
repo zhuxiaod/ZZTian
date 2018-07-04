@@ -66,6 +66,12 @@
 		04DE14AC20E4E691009DF030 /* ZZTCartoonCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 04DE14AA20E4E691009DF030 /* ZZTCartoonCell.xib */; };
 		04DE14B020E5015F009DF030 /* ZZTPlayCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 04DE14AE20E5015F009DF030 /* ZZTPlayCell.m */; };
 		04DE14B120E50160009DF030 /* ZZTPlayCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 04DE14AF20E5015F009DF030 /* ZZTPlayCell.xib */; };
+		04E6D49520EC6B4E00116085 /* ZZTMeEditViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 04E6D49320EC6B4E00116085 /* ZZTMeEditViewController.m */; };
+		04E6D49620EC6B4E00116085 /* ZZTMeEditViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 04E6D49420EC6B4E00116085 /* ZZTMeEditViewController.xib */; };
+		04E6D49920EC71A500116085 /* ZZTMeEditTopView.m in Sources */ = {isa = PBXBuildFile; fileRef = 04E6D49820EC71A500116085 /* ZZTMeEditTopView.m */; };
+		04E6D49B20EC71B500116085 /* ZZTMeEditTopView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 04E6D49A20EC71B500116085 /* ZZTMeEditTopView.xib */; };
+		04E6D49E20EC736400116085 /* ZZTMeEditButtomView.m in Sources */ = {isa = PBXBuildFile; fileRef = 04E6D49D20EC736400116085 /* ZZTMeEditButtomView.m */; };
+		04E6D4A020EC737500116085 /* ZZTMeEditButtomView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 04E6D49F20EC737500116085 /* ZZTMeEditButtomView.xib */; };
 		D9D2D4F33CB3B47DB08AD9C9 /* libPods-ZiZaiTianProject.a in Frameworks */ = {isa = PBXBuildFile; fileRef = BA8586C54F8E7A26D9A888C6 /* libPods-ZiZaiTianProject.a */; };
 		F7C04BEE20DF3D190055E7A8 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F7C04BEC20DF3D190055E7A8 /* Main.storyboard */; };
 		F7C04BF020DF3D190055E7A8 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = F7C04BEF20DF3D190055E7A8 /* Assets.xcassets */; };
@@ -181,6 +187,15 @@
 		04DE14AD20E5015F009DF030 /* ZZTPlayCell.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ZZTPlayCell.h; sourceTree = "<group>"; };
 		04DE14AE20E5015F009DF030 /* ZZTPlayCell.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ZZTPlayCell.m; sourceTree = "<group>"; };
 		04DE14AF20E5015F009DF030 /* ZZTPlayCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ZZTPlayCell.xib; sourceTree = "<group>"; };
+		04E6D49220EC6B4E00116085 /* ZZTMeEditViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ZZTMeEditViewController.h; sourceTree = "<group>"; };
+		04E6D49320EC6B4E00116085 /* ZZTMeEditViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ZZTMeEditViewController.m; sourceTree = "<group>"; };
+		04E6D49420EC6B4E00116085 /* ZZTMeEditViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ZZTMeEditViewController.xib; sourceTree = "<group>"; };
+		04E6D49720EC71A500116085 /* ZZTMeEditTopView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ZZTMeEditTopView.h; sourceTree = "<group>"; };
+		04E6D49820EC71A500116085 /* ZZTMeEditTopView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ZZTMeEditTopView.m; sourceTree = "<group>"; };
+		04E6D49A20EC71B500116085 /* ZZTMeEditTopView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ZZTMeEditTopView.xib; sourceTree = "<group>"; };
+		04E6D49C20EC736400116085 /* ZZTMeEditButtomView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ZZTMeEditButtomView.h; sourceTree = "<group>"; };
+		04E6D49D20EC736400116085 /* ZZTMeEditButtomView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ZZTMeEditButtomView.m; sourceTree = "<group>"; };
+		04E6D49F20EC737500116085 /* ZZTMeEditButtomView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ZZTMeEditButtomView.xib; sourceTree = "<group>"; };
 		749399599CA48ED07BA87311 /* Pods-ZiZaiTianProject.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ZiZaiTianProject.release.xcconfig"; path = "Pods/Target Support Files/Pods-ZiZaiTianProject/Pods-ZiZaiTianProject.release.xcconfig"; sourceTree = "<group>"; };
 		8E61AC85E4D70CE81268AC0F /* Pods-ZiZaiTianProject.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ZiZaiTianProject.debug.xcconfig"; path = "Pods/Target Support Files/Pods-ZiZaiTianProject/Pods-ZiZaiTianProject.debug.xcconfig"; sourceTree = "<group>"; };
 		BA8586C54F8E7A26D9A888C6 /* libPods-ZiZaiTianProject.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-ZiZaiTianProject.a"; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -274,6 +289,12 @@
 				041EE0A720EB66170012FEDF /* ZZTSettingSwichCell.h */,
 				041EE0A820EB66170012FEDF /* ZZTSettingSwichCell.m */,
 				041EE0A920EB66170012FEDF /* ZZTSettingSwichCell.xib */,
+				04E6D49720EC71A500116085 /* ZZTMeEditTopView.h */,
+				04E6D49820EC71A500116085 /* ZZTMeEditTopView.m */,
+				04E6D49A20EC71B500116085 /* ZZTMeEditTopView.xib */,
+				04E6D49C20EC736400116085 /* ZZTMeEditButtomView.h */,
+				04E6D49D20EC736400116085 /* ZZTMeEditButtomView.m */,
+				04E6D49F20EC737500116085 /* ZZTMeEditButtomView.xib */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -476,6 +497,9 @@
 				041EE09D20EB497A0012FEDF /* ZZTSettingViewController.h */,
 				041EE09E20EB497A0012FEDF /* ZZTSettingViewController.m */,
 				041EE09F20EB497A0012FEDF /* ZZTSettingViewController.xib */,
+				04E6D49220EC6B4E00116085 /* ZZTMeEditViewController.h */,
+				04E6D49320EC6B4E00116085 /* ZZTMeEditViewController.m */,
+				04E6D49420EC6B4E00116085 /* ZZTMeEditViewController.xib */,
 			);
 			path = Controller;
 			sourceTree = "<group>";
@@ -546,6 +570,7 @@
 				F7C04BDF20DF3D190055E7A8 /* Sources */,
 				F7C04BE020DF3D190055E7A8 /* Frameworks */,
 				F7C04BE120DF3D190055E7A8 /* Resources */,
+				A765FFC4396DAC0A156A9C15 /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -596,11 +621,14 @@
 				041EE0B020EB767B0012FEDF /* ZZTNoTypeCell.xib in Resources */,
 				041EE0A120EB497A0012FEDF /* ZZTSettingViewController.xib in Resources */,
 				049A99EB20E394BB00ED27C9 /* ZZTVIPTopView.xib in Resources */,
+				04E6D49B20EC71B500116085 /* ZZTMeEditTopView.xib in Resources */,
+				04E6D49620EC6B4E00116085 /* ZZTMeEditViewController.xib in Resources */,
 				048C334120E2121C00F69CE1 /* ZZTMeTopView.xib in Resources */,
 				F7C04BF320DF3D190055E7A8 /* LaunchScreen.storyboard in Resources */,
 				049A99BB20E3288400ED27C9 /* ZXDLoginRegisterView.xib in Resources */,
 				0442951B20E5D52300D1AABF /* ZZTBrowViewController.xib in Resources */,
 				042BA0CA20EA0A2C003E279A /* ZZTSignInView.xib in Resources */,
+				04E6D4A020EC737500116085 /* ZZTMeEditButtomView.xib in Resources */,
 				04DE149C20E4881B009DF030 /* ZZTVIPBtView.xib in Resources */,
 				049A99DC20E3879700ED27C9 /* ZZTVIPViewController.xib in Resources */,
 				041EE0B520EB8D0C0012FEDF /* ZZTExitCell.xib in Resources */,
@@ -622,6 +650,24 @@
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXShellScriptBuildPhase section */
+		A765FFC4396DAC0A156A9C15 /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"${SRCROOT}/Pods/Target Support Files/Pods-ZiZaiTianProject/Pods-ZiZaiTianProject-resources.sh",
+				"${PODS_ROOT}/BAPickView/BAPickView/BAPickView/BAPickView.bundle",
+			);
+			name = "[CP] Copy Pods Resources";
+			outputPaths = (
+				"${TARGET_BUILD_DIR}/${UNLOCALIZED_RESOURCES_FOLDER_PATH}/BAPickView.bundle",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-ZiZaiTianProject/Pods-ZiZaiTianProject-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
 		C1A3F4C3AA1706C371839754 /* [CP] Check Pods Manifest.lock */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
@@ -654,10 +700,12 @@
 				049A99BA20E3288400ED27C9 /* ZXDLoginRegisterView.m in Sources */,
 				041EE0AF20EB767B0012FEDF /* ZZTNoTypeCell.m in Sources */,
 				048C33E820E25E6400F69CE1 /* UIColor+Hex.m in Sources */,
+				04E6D49E20EC736400116085 /* ZZTMeEditButtomView.m in Sources */,
 				049A99DB20E3879700ED27C9 /* ZZTVIPViewController.m in Sources */,
 				04DE14B020E5015F009DF030 /* ZZTPlayCell.m in Sources */,
 				04B9FF4120E506FC007CC582 /* ZZTChildCollectionView.m in Sources */,
 				F7C04C2A20DF4A1F0055E7A8 /* UIImage+ZZTimage.m in Sources */,
+				04E6D49920EC71A500116085 /* ZZTMeEditTopView.m in Sources */,
 				049A99C920E32AF600ED27C9 /* UITextField+ZXDTextField.m in Sources */,
 				04DE149220E46E88009DF030 /* UIBarButtonItem+Item.m in Sources */,
 				049A99B920E3288400ED27C9 /* ZXDLoginRegisterTextField.m in Sources */,
@@ -672,6 +720,7 @@
 				044244D620EA3B0B0044502C /* ZZTSignButton.m in Sources */,
 				0442952320E5DFE400D1AABF /* ZZTCartoonViewController.m in Sources */,
 				F7C04C0C20DF3E9E0055E7A8 /* AppDelegate.m in Sources */,
+				04E6D49520EC6B4E00116085 /* ZZTMeEditViewController.m in Sources */,
 				042BA0BF20E9FACC003E279A /* ZZTMyCircleCellCollectionViewCell.m in Sources */,
 				042BA0C420E9FFBD003E279A /* ZZTHistoryViewController.m in Sources */,
 				042BA0C820EA0A1D003E279A /* ZZTSignInView.m in Sources */,
